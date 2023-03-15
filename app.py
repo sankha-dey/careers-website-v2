@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/") # @ is a decorator in python
 def hello_world():
-  return "<p>I did it...Bitch! Fuck Yeah</p>"
+  return render_template('home.html')
 
 if __name__ == "__main__":
   app.run(host = "0.0.0.0", debug = True)
